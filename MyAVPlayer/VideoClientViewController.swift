@@ -15,8 +15,15 @@ import Photos
 class AVPlayerViewController: UIViewController {
     
     //create the video asset property
-    var videoToPlay: AVAsset?
+    var MyVideoAsset: AVAsset?
+    var videoURLforPlayback: URL?
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue .identifier == "playbackVideo" {
+            let playbackVC = segue.destination as! PlaybackViewController
+            playbackVC.playbackURL = videoURLforPlayback
+        }
+    }
     
     
     
@@ -37,7 +44,20 @@ class AVPlayerViewController: UIViewController {
     
     
     @IBAction func playVideo(_ sender: Any) {
+        
+        guard let videoURLforPlayback = videoURLforPlayback  else {
+            let alert = UIAlertController(title: "Error", message: "video asset URL not found", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        
+            return
+        }
+        performSegue(withIdentifier: "playbackVideo", sender: videoURLforPlayback)
     }
+    
+    
+    
+    
     
     func startImagePickerFromVC(_ viewController: UIViewController!, usingDelegate delegate: (UINavigationControllerDelegate & UIImagePickerControllerDelegate)!){
         //check source for availablity
@@ -54,6 +74,11 @@ class AVPlayerViewController: UIViewController {
         imagePicker.delegate = delegate
         present(imagePicker,animated: true, completion: nil)
     }
+    
+    func videoToPlay(_ videoAsset:AVAsset?)-> URL{
+        let videoURL = videoAsset?.value(forKey: "URL")
+        return videoURL as! URL
+    }
 }
 
 extension AVPlayerViewController: UIImagePickerControllerDelegate {
@@ -61,12 +86,12 @@ extension AVPlayerViewController: UIImagePickerControllerDelegate {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         
         if mediaType == kUTTypeMovie {
-            let avAsset = AVAsset(url: info[UIImagePickerControllerMediaURL] as! URL)
+            MyVideoAsset = AVAsset(url: info[UIImagePickerControllerMediaURL] as! URL)
             let message = "Done"
             
-            print("----------------------")
-            print("avAsset", avAsset)
-            print("----------------------")
+            
+            videoURLforPlayback = videoToPlay(MyVideoAsset)
+          
             
             dismiss(animated: true, completion:  nil)
             let alert = UIAlertController(title: "Asset Loaded", message: message, preferredStyle: .alert)
