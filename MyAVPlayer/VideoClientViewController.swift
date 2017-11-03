@@ -11,20 +11,24 @@ import AVFoundation
 import MobileCoreServices
 import AssetsLibrary
 import Photos
+import AVKit
 
-class AVPlayerViewController: UIViewController {
+class VideoClientViewController: UIViewController {
     
     //create the video asset property
     var MyVideoAsset: AVAsset?
     var videoURLforPlayback: URL?
     
+    let avPlayerViewController = AVPlayerViewController()
+    var avPlayer: AVPlayer?
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue .identifier == "playbackVideo" {
+        if segue .identifier == "playbackVideo00" {
             let playbackVC = segue.destination as! PlaybackViewController
             playbackVC.playbackURL = videoURLforPlayback
         }
     }
-    
     
     
     @IBAction func getVideo(_ sender: Any) {
@@ -41,9 +45,22 @@ class AVPlayerViewController: UIViewController {
         })
     }
     
+    @IBAction func getVideo01(_ sender: Any) {
+        
+        guard let videoURLforPlayback = videoURLforPlayback else {
+            return
+        }
+        avPlayer = AVPlayer(url: videoURLforPlayback)
+        avPlayerViewController.player = self.avPlayer
+
+        present(avPlayerViewController, animated: true) { ()-> Void in
+            
+            self.avPlayerViewController.player?.play()
+        }
+    }
     
     
-    @IBAction func playVideo(_ sender: Any) {
+    @IBAction func playVideo00(_ sender: Any) {
         
         guard let videoURLforPlayback = videoURLforPlayback  else {
             let alert = UIAlertController(title: "Error", message: "video asset URL not found", preferredStyle: .alert)
@@ -52,10 +69,8 @@ class AVPlayerViewController: UIViewController {
         
             return
         }
-        performSegue(withIdentifier: "playbackVideo", sender: videoURLforPlayback)
+        performSegue(withIdentifier: "playbackVideo00", sender: videoURLforPlayback)
     }
-    
-    
     
     
     
@@ -81,7 +96,7 @@ class AVPlayerViewController: UIViewController {
     }
 }
 
-extension AVPlayerViewController: UIImagePickerControllerDelegate {
+extension VideoClientViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         
@@ -108,7 +123,7 @@ extension AVPlayerViewController: UIImagePickerControllerDelegate {
     }
 }
 
-extension AVPlayerViewController: UINavigationControllerDelegate {
+extension VideoClientViewController: UINavigationControllerDelegate {
     
 }
 

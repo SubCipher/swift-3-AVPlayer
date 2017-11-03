@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dZi-vu-SRv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,41 +9,129 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Player View Controller-->
+        <!--Video Client View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AVPlayerViewController" customModule="AVPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VideoClientViewController" customModule="MyAVPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEC-VV-cDm">
-                                <rect key="frame" x="85" y="318" width="69" height="30"/>
+                                <rect key="frame" x="153" y="302" width="69" height="30"/>
                                 <state key="normal" title="Get VIdeo"/>
                                 <connections>
                                     <action selector="getVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0j-D4-8Ic"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-Ob-BBp">
-                                <rect key="frame" x="240" y="318" width="72" height="30"/>
-                                <state key="normal" title="Play Video"/>
+                                <rect key="frame" x="140" y="340" width="95" height="30"/>
+                                <state key="normal" title="Play Video 00"/>
                                 <connections>
-                                    <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGG-yl-IFC"/>
+                                    <action selector="playVideo00:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSk-oT-nw9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spd-cE-D0j">
+                                <rect key="frame" x="141" y="387" width="92" height="30"/>
+                                <state key="normal" title="Play Video 01"/>
+                                <connections>
+                                    <action selector="getVideo01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmL-j4-G23"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lEC-VV-cDm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6cc-xv-gum"/>
-                            <constraint firstItem="lEC-VV-cDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="9ez-2Z-hFz"/>
-                            <constraint firstItem="lEC-VV-cDm" firstAttribute="baseline" secondItem="lo6-Ob-BBp" secondAttribute="baseline" id="bjW-h3-tgP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lo6-Ob-BBp" secondAttribute="trailing" constant="63" id="mVO-dC-RLm"/>
+                            <constraint firstItem="lo6-Ob-BBp" firstAttribute="top" secondItem="lEC-VV-cDm" secondAttribute="bottom" constant="8" id="5bl-04-TKN"/>
+                            <constraint firstItem="spd-cE-D0j" firstAttribute="top" secondItem="lo6-Ob-BBp" secondAttribute="bottom" constant="17" id="NL0-Q6-0P8"/>
+                            <constraint firstItem="lo6-Ob-BBp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QQn-DX-UrT"/>
+                            <constraint firstItem="lEC-VV-cDm" firstAttribute="centerX" secondItem="spd-cE-D0j" secondAttribute="centerX" id="dqp-vw-qSZ"/>
+                            <constraint firstItem="lo6-Ob-BBp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10.5" id="e5P-bn-Yt6"/>
+                            <constraint firstItem="lEC-VV-cDm" firstAttribute="centerX" secondItem="lo6-Ob-BBp" secondAttribute="centerX" id="jxH-8W-6cc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pNa-ca-ckb"/>
+                    <connections>
+                        <segue destination="7Ti-iA-JeE" kind="show" identifier="playbackVideo00" id="lNU-9a-N3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="471" y="-45"/>
+        </scene>
+        <!--Playback View Controller-->
+        <scene sceneID="aNl-rl-iq7">
+            <objects>
+                <viewController id="7Ti-iA-JeE" customClass="PlaybackViewController" customModule="MyAVPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLa-TJ-X5L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kBe-VF-g1j">
+                                <rect key="frame" x="0.0" y="47" width="375" height="572"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BbW-RR-hZ2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yeP-hi-Q5n"/>
+                    <connections>
+                        <outlet property="playbackViewOutlet" destination="kBe-VF-g1j" id="Psi-t5-hK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lm-SV-vsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="-45"/>
+        </scene>
+        <!--Video Playback View Controller-->
+        <scene sceneID="P9n-nc-heK">
+            <objects>
+                <viewController id="aum-GQ-SwG" customClass="VideoPlaybackViewController" customModule="MyAVPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFz-u1-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byo-k3-qCV">
+                                <rect key="frame" x="156" y="318" width="63" height="30"/>
+                                <state key="normal" title="PlayBack"/>
+                                <connections>
+                                    <action selector="playbackAction:" destination="LRW-2T-FXg" eventType="touchUpInside" id="hUv-mr-uoM"/>
+                                    <action selector="playbackAction:" destination="aum-GQ-SwG" eventType="touchUpInside" id="jkn-Ou-ebh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="byo-k3-qCV" firstAttribute="centerX" secondItem="Chs-TH-Ng0" secondAttribute="centerX" id="dKM-w9-wly"/>
+                            <constraint firstItem="byo-k3-qCV" firstAttribute="centerY" secondItem="Chs-TH-Ng0" secondAttribute="centerY" constant="-10.5" id="kxg-P9-EhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Chs-TH-Ng0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dca-5b-e0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LRW-2T-FXg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="704.79760119940033"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nXP-2V-TLC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dZi-vu-SRv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rKp-BG-qmL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="znm-Io-H5g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5T-yg-IBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="-45"/>
         </scene>
     </scenes>
 </document>

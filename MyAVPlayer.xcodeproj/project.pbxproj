@@ -13,7 +13,8 @@
 		2030E20E1FA983070086E3E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2030E20C1FA983070086E3E4 /* LaunchScreen.storyboard */; };
 		2030E2191FA983070086E3E4 /* AVPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2181FA983070086E3E4 /* AVPlayerTests.swift */; };
 		2030E2241FA983070086E3E4 /* AVPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2231FA983070086E3E4 /* AVPlayerUITests.swift */; };
-		2030E2321FA9834C0086E3E4 /* AVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2311FA9834C0086E3E4 /* AVPlayerViewController.swift */; };
+		2030E2321FA9834C0086E3E4 /* VideoClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2311FA9834C0086E3E4 /* VideoClientViewController.swift */; };
+		2030E2351FA9F1C80086E3E4 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2341FA9F1C80086E3E4 /* PlaybackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,8 @@
 		2030E21F1FA983070086E3E4 /* MyAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2030E2231FA983070086E3E4 /* AVPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerUITests.swift; sourceTree = "<group>"; };
 		2030E2251FA983070086E3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2030E2311FA9834C0086E3E4 /* AVPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.swift; sourceTree = "<group>"; };
+		2030E2311FA9834C0086E3E4 /* VideoClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClientViewController.swift; sourceTree = "<group>"; };
+		2030E2341FA9F1C80086E3E4 /* PlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 		2030E2021FA983070086E3E4 /* MyAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				2030E2311FA9834C0086E3E4 /* AVPlayerViewController.swift */,
+				2030E2311FA9834C0086E3E4 /* VideoClientViewController.swift */,
+				2030E2341FA9F1C80086E3E4 /* PlaybackViewController.swift */,
 				2030E2331FA984B60086E3E4 /* SupportingFiles */,
 			);
 			path = MyAVPlayer;
@@ -270,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2030E2321FA9834C0086E3E4 /* AVPlayerViewController.swift in Sources */,
+				2030E2351FA9F1C80086E3E4 /* PlaybackViewController.swift in Sources */,
+				2030E2321FA9834C0086E3E4 /* VideoClientViewController.swift in Sources */,
 				2030E2041FA983070086E3E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
