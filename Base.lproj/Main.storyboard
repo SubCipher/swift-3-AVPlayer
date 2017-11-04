@@ -35,7 +35,7 @@
                                 <rect key="frame" x="141" y="387" width="92" height="30"/>
                                 <state key="normal" title="Play Video 01"/>
                                 <connections>
-                                    <action selector="getVideo01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmL-j4-G23"/>
+                                    <action selector="playVideo01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tr7-K4-IHb"/>
                                 </connections>
                             </button>
                         </subviews>

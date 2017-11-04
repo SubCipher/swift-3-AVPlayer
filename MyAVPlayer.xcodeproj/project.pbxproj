@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				20CB37771FAD55AF00FE090C /* README.md */,
+				2030E2071FA983070086E3E4 /* Main.storyboard */,
 				2030E2021FA983070086E3E4 /* MyAVPlayer */,
 				2030E2171FA983070086E3E4 /* AVPlayerTests */,
 				2030E2221FA983070086E3E4 /* AVPlayerUITests */,
@@ -134,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				2030E2031FA983070086E3E4 /* AppDelegate.swift */,
-				2030E2071FA983070086E3E4 /* Main.storyboard */,
 				2030E20A1FA983070086E3E4 /* Assets.xcassets */,
 				2030E20C1FA983070086E3E4 /* LaunchScreen.storyboard */,
 				2030E20F1FA983070086E3E4 /* Info.plist */,

@@ -45,7 +45,7 @@ class VideoClientViewController: UIViewController {
         })
     }
     
-    @IBAction func getVideo01(_ sender: Any) {
+    @IBAction func playVideo01(_ sender: Any) {
         
         guard let videoURLforPlayback = videoURLforPlayback else {
             return
