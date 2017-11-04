@@ -2,7 +2,7 @@
 //  AVPlayerViewController.swift
 //  AVPlayer
 //
-//  Created by knax on 11/1/17.
+//  Created by kpicart on 11/1/17.
 //  Copyright © 2017 StepwiseDesigns. All rights reserved.
 //
 

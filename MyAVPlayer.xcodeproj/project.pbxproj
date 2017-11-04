@@ -15,6 +15,7 @@
 		2030E2241FA983070086E3E4 /* AVPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2231FA983070086E3E4 /* AVPlayerUITests.swift */; };
 		2030E2321FA9834C0086E3E4 /* VideoClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2311FA9834C0086E3E4 /* VideoClientViewController.swift */; };
 		2030E2351FA9F1C80086E3E4 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E2341FA9F1C80086E3E4 /* PlaybackViewController.swift */; };
+		20CB37781FAD55AF00FE090C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 20CB37771FAD55AF00FE090C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2030E2251FA983070086E3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2030E2311FA9834C0086E3E4 /* VideoClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClientViewController.swift; sourceTree = "<group>"; };
 		2030E2341FA9F1C80086E3E4 /* PlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
+		20CB37771FAD55AF00FE090C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		2030E1F71FA983070086E3E4 = {
 			isa = PBXGroup;
 			children = (
+				20CB37771FAD55AF00FE090C /* README.md */,
 				2030E2021FA983070086E3E4 /* MyAVPlayer */,
 				2030E2171FA983070086E3E4 /* AVPlayerTests */,
 				2030E2221FA983070086E3E4 /* AVPlayerUITests */,
@@ -248,6 +251,7 @@
 			files = (
 				2030E20E1FA983070086E3E4 /* LaunchScreen.storyboard in Resources */,
 				2030E20B1FA983070086E3E4 /* Assets.xcassets in Resources */,
+				20CB37781FAD55AF00FE090C /* README.md in Resources */,
 				2030E2091FA983070086E3E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
